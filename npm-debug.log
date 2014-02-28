@@ -1,0 +1,125 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.10.24/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'grunt-cli' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose cache add [ 'grunt-cli', null ]
+5 verbose cache add name=undefined spec="grunt-cli" args=["grunt-cli",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'grunt-cli',
+6 verbose parsed url   path: 'grunt-cli',
+6 verbose parsed url   href: 'grunt-cli' }
+7 silly lockFile 671ef8ac-grunt-cli grunt-cli
+8 verbose lock grunt-cli /Users/jo/.npm/671ef8ac-grunt-cli.lock
+9 silly lockFile 671ef8ac-grunt-cli grunt-cli
+10 silly lockFile 671ef8ac-grunt-cli grunt-cli
+11 verbose addNamed [ 'grunt-cli', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+14 verbose lock grunt-cli@ /Users/jo/.npm/d63f3d0b-grunt-cli.lock
+15 silly addNameRange { name: 'grunt-cli', range: '*', hasData: false }
+16 verbose url raw grunt-cli
+17 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-cli' ]
+18 verbose url resolved https://registry.npmjs.org/grunt-cli
+19 info trying registry request attempt 1 at 00:14:36
+20 verbose etag "BMODEVI8ASRQEWVWG2U87PJLG"
+21 http GET https://registry.npmjs.org/grunt-cli
+22 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+23 info trying registry request attempt 2 at 00:14:46
+24 verbose etag "BMODEVI8ASRQEWVWG2U87PJLG"
+25 http GET https://registry.npmjs.org/grunt-cli
+26 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+27 info trying registry request attempt 3 at 00:15:46
+28 verbose etag "BMODEVI8ASRQEWVWG2U87PJLG"
+29 http GET https://registry.npmjs.org/grunt-cli
+30 silly registry.get cb [ 304, undefined ]
+31 verbose etag grunt-cli from cache
+32 silly addNameRange number 2 { name: 'grunt-cli', range: '*', hasData: true }
+33 silly addNameRange versions [ 'grunt-cli',
+33 silly addNameRange   [ '0.1.0',
+33 silly addNameRange     '0.1.1',
+33 silly addNameRange     '0.1.2',
+33 silly addNameRange     '0.1.3',
+33 silly addNameRange     '0.1.4',
+33 silly addNameRange     '0.1.5',
+33 silly addNameRange     '0.1.6',
+33 silly addNameRange     '0.1.7',
+33 silly addNameRange     '0.1.8',
+33 silly addNameRange     '0.1.9',
+33 silly addNameRange     '0.1.10',
+33 silly addNameRange     '0.1.11',
+33 silly addNameRange     '0.1.12',
+33 silly addNameRange     '0.1.13' ] ]
+34 verbose addNamed [ 'grunt-cli', '0.1.13' ]
+35 verbose addNamed [ '0.1.13', '0.1.13' ]
+36 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+37 verbose lock grunt-cli@0.1.13 /Users/jo/.npm/28997503-grunt-cli-0-1-13.lock
+38 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+39 silly lockFile 28997503-grunt-cli-0-1-13 grunt-cli@0.1.13
+40 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+41 silly lockFile d63f3d0b-grunt-cli grunt-cli@
+42 silly resolved [ { name: 'grunt-cli',
+42 silly resolved     description: 'The grunt command line interface.',
+42 silly resolved     version: '0.1.13',
+42 silly resolved     author: { name: 'Grunt Team' },
+42 silly resolved     homepage: 'http://gruntjs.com/',
+42 silly resolved     repository: { type: 'git', url: 'git://github.com/gruntjs/grunt-cli.git' },
+42 silly resolved     bugs: { url: 'http://github.com/gruntjs/grunt-cli/issues' },
+42 silly resolved     licenses: [ [Object] ],
+42 silly resolved     bin: { grunt: 'bin/grunt' },
+42 silly resolved     engines: { node: '>= 0.8.0' },
+42 silly resolved     scripts: { test: 'node bin/grunt test' },
+42 silly resolved     preferGlobal: true,
+42 silly resolved     dependencies: { nopt: '~1.0.10', 'findup-sync': '~0.1.0', resolve: '~0.3.1' },
+42 silly resolved     devDependencies: { grunt: '~0.4.0', 'grunt-contrib-jshint': '~0.2.0' },
+42 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+42 silly resolved     readme: '# grunt-cli [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-cli.png?branch=master)](http://travis-ci.org/gruntjs/grunt-cli)\n> The Grunt command line interface.\n\nInstall this globally and you\'ll have access to the `grunt` command anywhere on your system.\n\n```shell\nnpm install -g grunt-cli\n```\n\n**Note:** The job of the `grunt` command is to load and run the version of Grunt you have installed locally to your project, irrespective of its version.  Starting with Grunt v0.4, you should never install Grunt itself globally.  For more information about why, [please read this](http://blog.nodejs.org/2011/03/23/npm-1-0-global-vs-local-installation).\n\nSee the [Getting Started](http://gruntjs.com/getting-started) guide for more information.\n\n## Shell tab auto-completion\nTo enable tab auto-completion for Grunt, add one of the following lines to your `~/.bashrc` or `~/.zshrc` file.\n\n```bash\n# Bash, ~/.bashrc\neval "$(grunt --completion=bash)"\n```\n\n```bash\n# Zsh, ~/.zshrc\neval "$(grunt --completion=zsh)"\n```\n\n## Installing grunt-cli locally\nIf you prefer the idiomatic Node.js method to get started with a project (`npm install && npm test`) then install grunt-cli locally with `npm install grunt-cli --save-dev`. Then add a script to your `package.json` to run the associated grunt command: `"scripts": { "test": "grunt test" } `. Now `npm test` will use the locally installed `./node_modules/.bin/grunt` executable to run your Grunt commands.\n\nTo read more about npm scripts, please visit the npm docs: [https://npmjs.org/doc/misc/npm-scripts.html](https://npmjs.org/doc/misc/npm-scripts.html).\n',
+42 silly resolved     readmeFilename: 'README.md',
+42 silly resolved     _id: 'grunt-cli@0.1.13',
+42 silly resolved     _from: 'grunt-cli@' } ]
+43 info install grunt-cli@0.1.13 into /usr/local/lib
+44 info installOne grunt-cli@0.1.13
+45 info /usr/local/lib/node_modules/grunt-cli unbuild
+46 info preuninstall grunt-cli@0.1.11
+47 info uninstall grunt-cli@0.1.11
+48 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild grunt-cli@0.1.11
+49 verbose /usr/local/bin,[object Object] binRoot
+50 info postuninstall grunt-cli@0.1.11
+51 info /usr/local/lib/node_modules/grunt-cli unbuild
+52 info preuninstall grunt-cli@0.1.11
+53 info uninstall grunt-cli@0.1.11
+54 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild grunt-cli@0.1.11
+55 verbose /usr/local/bin,[object Object] binRoot
+56 info postuninstall grunt-cli@0.1.11
+57 error error rolling back Error: EACCES, unlink '/usr/local/lib/node_modules/grunt-cli/.npmignore'
+57 error error rolling back  grunt-cli@0.1.13 { [Error: EACCES, unlink '/usr/local/lib/node_modules/grunt-cli/.npmignore']
+57 error error rolling back   errno: 3,
+57 error error rolling back   code: 'EACCES',
+57 error error rolling back   path: '/usr/local/lib/node_modules/grunt-cli/.npmignore' }
+58 error Error: EACCES, unlink '/usr/local/lib/node_modules/grunt-cli/.npmignore'
+58 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/grunt-cli/.npmignore']
+58 error   errno: 3,
+58 error   code: 'EACCES',
+58 error   path: '/usr/local/lib/node_modules/grunt-cli/.npmignore' }
+59 error Please try running this command again as root/Administrator.
+60 error System Darwin 13.1.0
+61 error command "/usr/local/Cellar/node/0.10.24/bin/node" "/usr/local/bin/npm" "install" "-g" "grunt-cli"
+62 error cwd /Users/jo/Web/jacob87.github.io
+63 error node -v v0.10.24
+64 error npm -v 1.3.21
+65 error path /usr/local/lib/node_modules/grunt-cli/.npmignore
+66 error code EACCES
+67 error errno 3
+68 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/grunt-cli/.npmignore'
+69 verbose exit [ 3, true ]

@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Jacob87/jacob87.github.io/issues"
   },
-  "homepage": "https://github.com/Jacob87/jacob87.github.io"
+  "homepage": "https://github.com/Jacob87/jacob87.github.io",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-jekyll": "~0.4.1",
+    "grunt-contrib-compass": "~0.7.0"
+  }
 }
