@@ -3,6 +3,15 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+@import "susy";
+@import "partials/susy";
+@import "breakpoint";
+
 @import "compass/reset";
-@import "partials/main";
+@import "partials/base";
+@import "partials/global";
+@import "partials/container";
 @import "partials/syntax";
+@import "partials/header";
+@import "partials/modules";
+@import "partials/themes";

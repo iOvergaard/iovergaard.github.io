@@ -5,16 +5,19 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		compass: {
+			options: {
+				bundleExec: true,
+				require: ['susy', 'breakpoint'],
+				environment: 'production'
+			},
 			dev: {
 				options: {
-					bundleExec: true,
 					environment: 'development'
 				}
 			},
 			dist: {
 				options: {
-					bundleExec: true,
-					environment: 'production'
+					force: true
 				}
 			}
 		},
@@ -25,18 +28,28 @@ module.exports = function(grunt) {
 			},
 			build: {
 				options: {
-					drafts: true
+					drafts: true,
+					dest: './_dev'
 				}
-			}
+			},
+			dist: {}
 		},
 
 		watch: {
 			scripts: {
-				files: 'sass/*.scss',
-				tasks: ['compass:dev'],
+				files: 'sass/**/*.scss',
+				tasks: ['compass:dev', 'jekyll:build'],
 				options: {
 					spawn: false,
 					atBegin: true
+				}
+			},
+			jekyll: {
+				files: ['_layouts/**/*.html', '*.html'],
+				tasks: ['jekyll:build'],
+				options: {
+					spawn: false,
+					atBegin: false
 				}
 			}
 		},
@@ -45,7 +58,7 @@ module.exports = function(grunt) {
 			server: {
 				options: {
 					port: 4000,
-					base: '_site',
+					base: '_dev',
 					keepalive: true
 				}
 			}
@@ -57,5 +70,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 
-	grunt.registerTask('default', ['watch', 'jekyll:build']);
+	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('dist', ['compass:dist', 'jekyll:dist']);
 }

@@ -1,0 +1,9 @@
+.list {
+
+	&.t-border-bottom {
+
+		li {
+			border-bottom: solid 1px $border-color;
+		}
+	}
+}
