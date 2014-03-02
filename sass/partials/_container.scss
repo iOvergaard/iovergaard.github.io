@@ -3,7 +3,6 @@
 @include border-box-sizing;
 
 .container {
-	@include container(4 center static);
 	@include show-grid;
 
 	padding: 1em;

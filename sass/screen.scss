@@ -9,9 +9,11 @@
 
 @import "compass/reset";
 @import "partials/base";
+
+@import "partials/modules";
+@import "partials/themes";
+
 @import "partials/global";
 @import "partials/container";
 @import "partials/syntax";
 @import "partials/header";
-@import "partials/modules";
-@import "partials/themes";

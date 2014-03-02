@@ -5,11 +5,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>{{ page.title }}</title>
 		<meta name="viewport" content="width=device-width">
+
+		{{ if page.excerpt }}
+		<meta name="description" content="{{ page.excerpt | strip_html }}">
+		{{ /if }}
 	</head>
 	<body>
 
 		<header class="container">
-			<a href="/"><h1 class="title">{{ site.name }}</h1></a>
+			<a href="/"><span class="h1 title">{{ site.name }}</span></a>
 		</header>
 
 		<div class="container">

@@ -1,9 +1,21 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<header>
+	<h1>{{ page.title }}</h1>
+	<p>
+	{{ page.author }}
+	{{ if page.author }}
+		By
+		{{ if page.author == 'default' }}
+			{{ site.author }}
+		{{ else }}
+			{{ page.author }}
+		{{ /if }}
+	<time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+	</p>
+</header>
 
-<div class="post">
-{{ content }}
-</div>
+<article class="post">
+	{{ content }}
+</article>
