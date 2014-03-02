@@ -15,7 +15,11 @@ title: iOvergaard Blog
       			<time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
 
       			<p>
-      				{{ post.content | strip_html | truncatewords: 40 }}
+      				{{ post.content | truncatehtml: 300 }}
+      			</p>
+
+      			<p>
+      				<a href="{{ post.url }}">Read more...</a>
       			</p>
       		</article>
     	</li>

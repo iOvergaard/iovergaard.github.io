@@ -51,6 +51,13 @@ module.exports = function(grunt) {
 					spawn: false,
 					atBegin: false
 				}
+			},
+			posts: {
+				files: '_posts/*',
+				tasks: ['jekyll:build'],
+				options: {
+					spawn: false
+				}
 			}
 		},
 
