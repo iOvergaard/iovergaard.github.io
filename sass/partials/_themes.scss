@@ -1,9 +1,26 @@
+@mixin t-box-shadow {
+	border: solid 1px $border-color;
+	box-shadow: 5px 5px 10px $border-color;
+	border-radius: 8px;
+}
+
+body {
+	background: $body-color;
+}
+
 .list {
 
 	&.t-border-bottom {
 
 		li {
 			border-bottom: solid 1px $border-color;
+		}
+	}
+
+	&.t-box-shadow {
+
+		li {
+			@include t-box-shadow;
 		}
 	}
 }

@@ -1,13 +1,14 @@
 ---
 layout: default
 title: iOvergaard Blog
+excerpt: Blog for Jacob Overgaard
 ---
 
 <section class="modules m-postview">
-  <ul class="list t-border-bottom">
+  <ul class="list l-padding">
     {% for post in site.posts %}
     	<li>
-    		<article>
+    		<article class="post">
     			<header>
     				<a href="{{ post.url }}"><span class="h3">{{ post.title }}</span></a>
     			</header>
@@ -15,7 +16,11 @@ title: iOvergaard Blog
       			<time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
 
       			<p>
-      				{{ post.content | strip_html | truncatewords: 40 }}
+      				{{ post.excerpt }}
+      			</p>
+
+      			<p>
+      				<a href="{{ post.url }}">Read more...</a>
       			</p>
       		</article>
     	</li>
