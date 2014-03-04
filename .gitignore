@@ -1,4 +1,6 @@
-_site
-_dev
 node_modules
-.sass-cache
+sass
+Gemfile
+Gemfile.lock
+Gruntfile.js
+package.json
