@@ -4,6 +4,10 @@
 	border-radius: 8px;
 }
 
+body {
+	background: $body-color;
+}
+
 .list {
 
 	&.t-border-bottom {
