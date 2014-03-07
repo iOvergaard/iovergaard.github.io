@@ -6,19 +6,21 @@
 		<title>{{ page.title }}</title>
 		<meta name="viewport" content="width=device-width">
 
-		{{ if page.excerpt }}
+		{% if page.excerpt %}
 		<meta name="description" content="{{ page.excerpt | strip_html }}">
-		{{ /if }}
+		{% endif %}
 	</head>
 	<body>
 
 		<header class="container">
-			<a href="/"><span class="h1 title">{{ site.name }}</span></a>
+			<a href="/"><span id="siteTitle" class="h1 title">{{ site.name }}</span></a>
 		</header>
 
 		<div class="container">
-			{{ content }}
+			{% include breadcrumb.html %}
 		</div>
+
+		{{ content }}
 
 		<footer class="container">
 		</footer>

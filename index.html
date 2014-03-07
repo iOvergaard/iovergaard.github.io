@@ -3,27 +3,47 @@ layout: default
 title: iOvergaard Blog
 excerpt: Blog for Jacob Overgaard
 ---
+<div class="container">
+  <section class="modules m-postview">
+    <ul class="list t-spacing">
+      {% for post in paginator.posts %}
+      	<li>
+      		<article class="post">
+      			<header>
+      				<a href="{{ post.url }}"><span class="h3">{{ post.title }}</span></a>
+      			</header>
+        			
+        			<time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
 
-<section class="modules m-postview">
-  <ul class="list l-padding">
-    {% for post in site.posts %}
-    	<li>
-    		<article class="post">
-    			<header>
-    				<a href="{{ post.url }}"><span class="h3">{{ post.title }}</span></a>
-    			</header>
-      			
-      			<time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+        			<p>
+        				{{ post.excerpt }}
+        			</p>
 
-      			<p>
-      				{{ post.excerpt }}
-      			</p>
+        			<p>
+        				<a href="{{ post.url }}">Read more...</a>
+        			</p>
+        		</article>
+      	</li>
+      {% endfor %}
+    </ul>
 
-      			<p>
-      				<a href="{{ post.url }}">Read more...</a>
-      			</p>
-      		</article>
-    	</li>
-    {% endfor %}
-  </ul>
-</section>
+    <!-- Pagination links -->
+    {% if paginator.total_pages > 1 %}
+    <div class="modules m-pagination">
+      {% if paginator.previous_page %}
+        <a href="{% if paginator.previous_page == 1 %}/{% else %}/page{{ paginator.previous_page }}{% endif %}" class="previous">Previous</a>
+      {% else %}
+        <span class="previous">Previous</span>
+      {% endif %}
+      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.next_page %}
+        <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+      {% else %}
+        <span class="next">Next</span>
+      {% endif %}
+    </div>
+    {% endif %}
+  </section>
+
+  {% include sidebar.html %}
+</div>

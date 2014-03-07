@@ -1,5 +1,5 @@
 @mixin t-box-shadow {
-	border: solid 1px $border-color;
+	border: $border-default;
 	box-shadow: 5px 5px 10px $border-color;
 	border-radius: 8px;
 }
@@ -13,7 +13,7 @@ body {
 	&.t-border-bottom {
 
 		li {
-			border-bottom: solid 1px $border-color;
+			border-bottom: $border-default;
 		}
 	}
 
@@ -21,6 +21,48 @@ body {
 
 		li {
 			@include t-box-shadow;
+		}
+	}
+
+	&.t-spacing {
+
+		li {
+			margin: 0 0 1em;
+			padding: 1em;
+		}
+	}
+}
+
+.title {
+	text-align: center;
+}
+
+#siteTitle {
+	color: black;
+}
+
+.m-panel {
+
+	.l-panel-header {
+		text-align: center;
+	}
+
+	.l-panel-header,
+	.l-panel-body,
+	.l-panel-footer
+	{
+		padding: 1rem;
+	}
+
+	&.t-border {
+
+		border: $border-default;
+
+		.l-panel-header {
+			border-bottom: $border-default;
+		}
+		.l-panel-footer {
+			border-top: $border-default;
 		}
 	}
 }

@@ -1,11 +1,4 @@
-/*$total-columns: 4;
-$column-width: 4em;
-$gutter-width: 1em;
-$grid-padding: $gutter-width;
-
-@include border-box-sizing;*/
-
 $susy: (
-	columns: 4,  // The number of columns in your grid
+	columns: 12,  // The number of columns in your grid
 	global-box-sizing: border-box,
 );

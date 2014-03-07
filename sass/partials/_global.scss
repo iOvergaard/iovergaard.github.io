@@ -1,43 +1,56 @@
-body {
-	font-family: $global-font;
-	font-size: 87.5%;
-	line-height: $global-line-height;
+html {
+	font-size: 90%;
 }
 
-a, a:hover, a:visited, a:active {
-	color: $global-font-color;
-	text-decoration: none;
+body {
+	font-family: $global-font;
+	font-size: $global-font-size;
+	line-height: $global-line-height;
+	vertical-align: baseline;
+}
+
+a {
+	color: $global-link-color;
+	text-decoration: underline;
+	outline: none;
+
+	&:hover {
+		text-decoration: none;
+		color: $global-font-color;
+	}
+}
+
+header {
+	a {
+		text-decoration: none;
+	}
 }
 
 h1, .h1 {
-	font-size: 2em;
-	letter-spacing: -0.02em;
-	padding: 0.5em 0;
+	color: $global-link-color;
+	font-size: 2rem;
+	letter-spacing: -0.02rem;
+	padding: 0.5rem 0;
 	display: block;
 }
 
 h2, .h2 {
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	font-style: italic;
-	letter-spacing: -0.02em;
-	padding: 0.5em 0;
+	letter-spacing: -0.02rem;
+	padding: 0.5rem 0;
 	display: block;
 }
 
 h3, .h3 {
-	font-size: 1.5em;
-	padding: 0.5em 0;
+	font-size: 1.5rem;
+	padding: 0.5rem 0;
 	display: block;
-	letter-spacing: -0.02em;
+	letter-spacing: -0.02rem;
 }
 
 p {
 	margin: $paragraph-margin;
-	outline-color: rgb(0, 0, 0);
-	outline-style: none;
-	outline-width: 0px;
-	vertical-align: baseline;
-	font-size: $global-font-size;
 }
 
 img {

@@ -1,10 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext);
+
 $body-color: #fff;
 $background-color: rgba(0,0,0,.1);
 $border-color: #ccc;
+$border-default: solid 1px $border-color;
 
 $paragraph-margin: 0 0 1em;
 
-$global-font: Helvetica, Arial, sans-serif;
-$global-line-height: 1.5em;
-$global-font-size: 1.1em;
-$global-font-color: #000;
+$global-font: 'Open Sans', Helvetica, Arial, sans-serif;
+$global-line-height: 1.7;
+$global-font-size: 1rem;
+$global-font-color: #444;
+$global-link-color: #21759b;
+
+/* Breakpoints */
+$large: 1000px;
+$extralarge: 1200px;

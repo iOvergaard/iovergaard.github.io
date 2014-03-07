@@ -1,28 +1,48 @@
 .list {
-	@include span(full);
-
 	margin: 1em 0;
+}
 
-	li {
-		margin: 0 0 1em;
-	}
+.m-post {
 
-	&.l-padding {
-
-		li {
-			padding: 1em;
-		}
+	@include breakpoint($large) {
+		@include span(first 9);
 	}
 }
 
-.post {
+.m-postview {
+	@include breakpoint($large) {
+		@include span(first 9);
+	}
+}
 
-	a {
-		text-decoration: underline;
+.m-panel {
+	margin-bottom: 1rem;
+}
 
-		&:hover {
-			text-decoration: none;
-			color: green;
-		}
+#sidebar {
+
+	display: none;
+
+	@include breakpoint($large) {
+		display: block;
+		@include span(last 3);
+	}
+}
+
+.m-pagination {
+	padding: 1em;
+
+	border: solid 1px $border-color;
+
+	@include span(full);
+
+	text-align: center;
+
+	.previous {
+		float: left;
+	}
+
+	.next {
+		float: right;
 	}
 }

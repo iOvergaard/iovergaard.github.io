@@ -1,0 +1,32 @@
+<aside id="sidebar" class="modules">
+	<section class="findme m-panel t-border">
+		<header class="l-panel-header">
+			<span class="h3">Look me up on</span>
+		</header>
+
+		<div class="l-panel-body">
+			<ul class="list t-unstyled">
+				<li><a target="_blank" href="http://facebook.com/jaove">Facebook</a></li>
+				<li><a target="_blank" href="http://twitter.com/iOvergaard">Twitter</a></li>
+				<li><a target="_blank" href="http://linkedin.com/in/jacobovergaard">LinkedIn</a></li>
+				<li><a target="_blank" href="{{ site.author_profile }}">Google+</a></li>
+				<li><a target="_blank" href="http://github.com/Jacob87">Github</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="categories m-panel t-border">
+		<header class="l-panel-header">
+			<span class="h3">Categories</span>
+		</header>
+
+		<div class="l-panel-body">
+			{% for category in site.categories %}
+				<li>
+					<a href=""></a>
+				</li>
+		    {% endfor %}
+	    </div>
+
+    </section>
+</aside>
