@@ -1,4 +1,5 @@
-name: iOvergaard
+url: http://jovergaard.me
+name: Jacob Overgaard
 markdown: redcarpet
 pygments: true
 permalink: /:title.html
@@ -6,3 +7,4 @@ author: Jacob Overgaard
 author_profile: https://plus.google.com/+JacobOvergaardInfo
 exclude: [sass, node_modules, Gemfile, Gemfile.lock, Gruntfile.js, package.json]
 include: [.nojekyll]
+paginate: 5
