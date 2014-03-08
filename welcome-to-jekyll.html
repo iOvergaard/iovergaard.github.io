@@ -14,28 +14,42 @@ To add new posts, simply add a file in the _posts directory that follows the con
 	</head>
 	<body>
 
-		<header class="container">
-			<a href="/"><span class="h1 title">iOvergaard</span></a>
+		<section class="container">
+			<header>
+				<a href="/"><span id="siteTitle" class="h1 title">Jacob Overgaard</span></a>
+			</header>
+
+			<ol class="modules m-breadcrumb list l-inline">
+	<li><a href="/">Frontpage</a></li>
+	
+		<li>></li>
+		<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/welcome-to-jekyll.html"><span itemprop="title">Welcome to Jekyll!</span></a></li>
+	
+</ol>
+
+			<div class="modules m-post">
+
+	<article itemscope itemtype="http://schema.org/BlogPosting" class="post">
+		<header>
+			<h1>Welcome to Jekyll!</h1>
+			<p>
+				By
+				
+					<a target="_blank" href="https://plus.google.com/+JacobOvergaardInfo?rel=author" rel="author">
+						<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+							<span itemprop="name">
+								Jacob Overgaard
+							</span>
+						</span>
+					</a>
+				
+
+				<time itemprop="datePublished" content="2014-02-28 23:53:13 +0100">28 Feb 2014</time>
+			</p>
 		</header>
 
-		<div class="container">
-			<article class="post">
-	<header>
-		<h1>Welcome to Jekyll!</h1>
-		<p>
-		
-		
-			By
-			
-				Jacob Overgaard
-			
-				
-			
-		<time datetime="2014-02-28 23:53:13 +0100">28 Feb 2014</time>
-		</p>
-	</header>
-
-	<p>You&#39;ll find this post in your <code>_posts</code> directory - edit this post and re-build (or run with the <code>-w</code> switch) to see your changes!
+		<div itemprop="articleBody">
+			<p>You&#39;ll find this post in your <code>_posts</code> directory - edit this post and re-build (or run with the <code>-w</code> switch) to see your changes!
 To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
 
 <p><img src="http://placehold.it/2000x400" alt="Test image"></p>
@@ -51,13 +65,41 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
 
 <p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/mojombo/jekyll">Jekyll&#39;s GitHub repo</a>.</p>
 
-	
-</article>
-
 		</div>
+		
+	</article>
 
-		<footer class="container">
-		</footer>
+	<span>Related articles:</span><br>
+	<ul class="list t-unstyled">
+		
+			<li><a href="/welcome.html">Welcome to Jekyll!</a></li>
+		
+			<li><a href="/sonos-sub-setup.html">Sonos Sub</a></li>
+		
+	</ul>
+</div>
+
+<aside id="sidebar" class="modules">
+	<section class="findme m-panel t-border">
+		<header class="l-panel-header">
+			<span class="h3">Look me up on</span>
+		</header>
+
+		<div class="l-panel-body">
+			<ul class="list t-unstyled">
+				<li><a target="_blank" href="http://facebook.com/jaove">Facebook</a></li>
+				<li><a target="_blank" href="http://twitter.com/iOvergaard">Twitter</a></li>
+				<li><a target="_blank" href="http://linkedin.com/in/jacobovergaard">LinkedIn</a></li>
+				<li><a target="_blank" href="https://plus.google.com/+JacobOvergaardInfo">Google+</a></li>
+				<li><a target="_blank" href="http://github.com/Jacob87">Github</a></li>
+			</ul>
+		</div>
+	</section>
+</aside>
+
+			<footer>
+			</footer>
+		</section>
 
 		<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" />
 
