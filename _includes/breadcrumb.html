@@ -1,7 +1,7 @@
-<ol class="breadcrumbs">
-{% for p in page.ancestors %}
-        <li><a href="{{ p.url }}">{{ p.title }}</a>
-        <li class="divider">&gt;</li>
-{% endfor %}
-        <li class="active">{{ page.title }}</li>
+<ol class="modules m-breadcrumb list l-inline">
+	<li><a href="/">Frontpage</a></li>
+	{% if page.url != "/index.html" %}
+		<li>></li>
+		<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="{{ page.url }}"><span itemprop="title">{{ page.title }}</span></a></li>
+	{% endif %}
 </ol>

@@ -12,18 +12,18 @@
 	</head>
 	<body>
 
-		<header class="container">
-			<a href="/"><span id="siteTitle" class="h1 title">{{ site.name }}</span></a>
-		</header>
+		<section class="container">
+			<header>
+				<a href="/"><span id="siteTitle" class="h1 title">{{ site.name }}</span></a>
+			</header>
 
-		<div class="container">
 			{% include breadcrumb.html %}
-		</div>
 
-		{{ content }}
+			{{ content }}
 
-		<footer class="container">
-		</footer>
+			<footer>
+			</footer>
+		</section>
 
 		<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" />
 

@@ -3,49 +3,56 @@ layout: default
 title: iOvergaard Blog
 excerpt: Blog for Jacob Overgaard
 ---
-<div class="container">
-  <section class="modules m-postview">
-    <ul class="list t-spacing">
-      {% for post in paginator.posts %}
-      	<li>
-      		<article class="post">
-      			<header>
-      				<a href="{{ post.url }}"><span class="h3">{{ post.title }}</span></a>
+<div class="modules m-postview">
+  <ul class="list t-spacing">
+    {% for post in paginator.posts %}
+    	<li>
+    		<article class="post">
+    			<header>
+    				<a href="{{ post.url }}"><span class="h3">{{ post.title }}</span></a>
 
-              <p><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></p>
+            <p>
+              By
+              {% if !post.author or post.author == 'default' %}
+                <a target="_blank" href="{{ site.author_profile }}?rel=author" rel="author">{{ site.author }}</a>
+              {% else %}
+                <a target="_blank" href="{{ post.author_profile }}?rel=author" rel="author">{{ page.author }}</a>
+              {% endif %}
+              <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+            </p>
 
-              <p>{{ post.content | reading_time }} minutes to read</p>
-      			</header>
+            <p>{{ post.content | reading_time }} minutes to read</p>
+    			</header>
 
-      			<p>
-      				{{ post.excerpt }}
-      			</p>
+    			<p>
+    				{{ post.excerpt }}
+    			</p>
 
-      			<p>
-      				<a href="{{ post.url }}">Read more...</a>
-      			</p>
-        	</article>
-      	</li>
-      {% endfor %}
-    </ul>
+    			<p>
+    				<a href="{{ post.url }}">Read more...</a>
+    			</p>
+      	</article>
+    	</li>
+    {% endfor %}
+  </ul>
 
-    <!-- Pagination links -->
-    {% if paginator.total_pages > 1 %}
-    <div class="modules m-pagination">
-      {% if paginator.previous_page %}
-        <a href="{% if paginator.previous_page == 1 %}/{% else %}/page{{ paginator.previous_page }}{% endif %}" class="previous">Previous</a>
-      {% else %}
-        <span class="previous">Previous</span>
-      {% endif %}
-      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-      {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}" class="next">Next</a>
-      {% else %}
-        <span class="next">Next</span>
-      {% endif %}
-    </div>
+  <!-- Pagination links -->
+  {% if paginator.total_pages > 1 %}
+  <div class="modules m-pagination">
+    {% if paginator.previous_page %}
+      <a href="{% if paginator.previous_page == 1 %}/{% else %}/page{{ paginator.previous_page }}{% endif %}" class="previous">Previous</a>
+    {% else %}
+      <span class="previous">Previous</span>
     {% endif %}
-  </section>
+    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+    {% else %}
+      <span class="next">Next</span>
+    {% endif %}
+  </div>
+  {% endif %}
 
-  {% include sidebar.html %}
 </div>
+
+{% include sidebar.html %}
