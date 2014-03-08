@@ -2,6 +2,10 @@
 	margin: 1em 0;
 }
 
+.post {
+	margin: 0 0 4em 0;
+}
+
 .m-post {
 
 	@include breakpoint($large) {

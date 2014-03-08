@@ -2,26 +2,33 @@
 layout: default
 ---
 <div class="container">
+	<div class="modules m-post">
 
-	<article class="modules m-post post">
-		<header>
-			<h1>{{ page.title }}</h1>
-			<p>
-			{{ page.author }}
-			{{ if page.author }}
-				By
-				{{ if page.author == 'default' }}
-					{{ site.author }}
-				{{ else }}
-					{{ page.author }}
-				{{ /if }}
-			<time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
-			</p>
-		</header>
+		<article class="post">
+			<header>
+				<h1>{{ page.title }}</h1>
+				<p>
+					By
+					{% if !page.author or page.author == 'default' %}
+						<a target="_blank" href="{{ site.author_profile }}?rel=author" rel="author">{{ site.author }}</a>
+					{% else %}
+						<a target="_blank" href="{{ page.author_profile }}?rel=author" rel="author">{{ page.author }}</a>
+					{% endif %}
+					<time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+				</p>
+			</header>
 
-		{{ content }}
-		
-	</article>
+			{{ content }}
+			
+		</article>
+
+		<span>Related articles:</span><br>
+		<ul class="list t-unstyled">
+			{% for post in site.related_posts %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
 
 	{% include sidebar.html %}
 </div>
