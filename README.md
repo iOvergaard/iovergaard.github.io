@@ -1,2 +1,2 @@
-jacob87.github.io
+snebold.dk
 =================
