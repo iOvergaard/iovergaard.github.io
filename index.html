@@ -6,6 +6,42 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="description" content="Contact information for Jacob Overgaard">
 		<link rel="icon" href="data:,">
+		<style>
+			:root {
+			  --background-color: white;
+			  --background-color-invert: #292929;
+			  --text-color: #292929;
+			  --text-color-invert: white;
+			}
+			
+			@media screen and (prefers-color-scheme: dark) {
+			  :root {
+			    --background-color: #292929;
+			    --background-color-invert: white;
+			    --text-color: white;
+			    --text-color-invert: #292929;
+			  }
+			}
+			
+			body {
+			  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto",
+			    "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+			  font-size: 21px;
+			  font-style: normal;
+			  font-weight: 400;
+			  letter-spacing: -0.063px;
+			  line-height: 32px;
+			  text-rendering: optimizeLegibility;
+			  -webkit-font-smoothing: antialiased;
+			  background-color: var(--background-color);
+			  color: var(--text-color);
+			}
+			
+			body {
+			  margin: 0;
+			  padding: 0 1rem;
+			}
+		</style>
 	</head>
 	<body>
 		<header style="text-align:center">
